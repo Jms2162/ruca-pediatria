@@ -1,339 +1,333 @@
 
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-     
-    body{
-       
-        /*background: linear-gradient(to right, white, #b1dcd0);*/
-        background-color: whitesmoke;
-    }
-     
-     
-    /*achicamos el logo*/
-     
-    .logo{
-        width: 40%;
-        height: 10rem;
-       
-    }
-     
-    /*esto hace que el logo y el menu tengan ese padding*/
-    header{
-        padding: 1rem;
-        padding-bottom: 4rem;
-    }
-     
-    /*ruta de especifidad para darle una altura y ancho al nav*/
-    header nav{
-        height: 2.5rem;
-        width: 50%;
-        
-    }
-    header nav div .hove:hover{
-        color: #ed1545;
-    }
 
-    .gif{
-        width: 30%;
-    }
-    
-    main{
-        margin-top: 2rem;
-    }
-     
-    .falso-main-index{
-        text-align: center;
-    }
-     
-     
-    /*maneja todos los h1 del codigo*/
-    h1{
-        font-family: serif;
-        text-align: center;
-        font-weight: bolder;
-    }
-     
-     
-     
-    h1{
-        font-family: 'Georgia', serif;  
-        font-size: 30px;  
-        color: #444;  
-        font-style: roboto;  
-        text-align: center;  
-          
-        padding-bottom: 10px;  
-        margin-bottom: 20px;
-        margin-top: 20px;
-    }
-     
-     
-     
-    .titulo-index{
-        font-size: xx-large;
-    }
-     
-    .bienvenido{
-        margin-top: 1.5rem;
-        margin: 1rem;
-        border: 1px solid black;
-        padding: 1rem;
-        border-radius: 15px;
-       
-       
-    }
-     
-    
-     
-    .seccion-quienes-somos{
-        margin-top: 1rem;
-     
-    }
-
-    .imagen-quienes-somos{
-        width: 10rem;
-    }
-
-    .imagen-servicios{
-        width: 8rem;
-    }
-     
-    .quienes-somos{
-        border: 1px solid black;
-        padding: 1rem;
-        margin: 1rem;
-        border-radius: 15px;
-    }
-     
-    
-    .servicios{
-        border-top: 1px solid black;
-        margin: 2rem 1rem;
-        display: flex;
-        flex-direction: column;
-        align-self: center;
-        margin-bottom: 1rem;
-    }
-     
-    .seccion-servicios{
-        margin-top: 4rem;
-    }
-    .negrita{
-        font-weight: bolder;
-        margin-top: 1rem;
-    }
-     
-    
-     
-    .boton{
-        margin-top: 5rem;
-    }
-     
-    header nav div{
-        display: flex;
-        flex-direction: row;
-    }
-     
-    /*le da un borde redondeado a las imagenes */
-    .d-block, .w-100 .C{
-        border-radius: 15px;
-    }
-     
-     
-    .card, .card{
-        display: inline-block;
-        justify-content: center;
-        border-radius: 30px;
-    }
-     
-     
-    .card:hover{
-        box-shadow: 15px 15px 38px black;
-        transition: 0.3s;
-    }
-     
-    .card-body, .background{
-        background-color: #f0eded;
-    }
-
-
-/*Nosotros*/    
-/*Imagenes de staff*/    
-
-.foto-patricia{
-    width: 100%;
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.foto-soledad{
-    width: 100%;
-    height: 100%;
+body {
+  background-color: whitesmoke;
 }
 
-/*falso main nosotros*/
+h1 {
+  font-family: 'Georgia', serif;
+  font-size: 30px;
+  color: #444;
+  text-align: center;
+  padding-bottom: 10px;
+  margin: 20px 0;
+}
 
-.main-nosotros{
+/* =======================
+   MOBILE STYLES (default)
+========================== */
+.logo {
+  width: 45%;
+  height: auto;
+  display: block;
+  margin: 0;
+}
+
+header {
+  padding: 1.2rem;
+  padding-bottom: 1rem;
   text-align: center;
 }
 
-
-.card-container{
-    display: flex;
-    flex-wrap: wrap;      /* Permite que las tarjetas se acomoden en múltiples filas */
-    gap: 4rem;            /* Espacio entre las tarjetas */
-    justify-content: center; /* Centra las tarjetas horizontalmente */
-    flex-direction: column;
-    margin-left: 2rem;
-    text-align: center;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
-
-
-.tarjeta-anabella{
-    margin-top: 7rem;
+.navbar-toggler {
+  margin-top: 1rem;
+  margin-left: auto;
+  display: block;
+  font-size: 1.5rem;
+  z-index: 1001;
 }
 
-
-.tarjeta-contard{
-    margin-top: 7rem;
+.navbar-collapse {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  position: absolute;
+  top: 100%;
+  left: -7rem;
+  width: 250%;
+  z-index: 999;
+  padding: 2rem 1rem;
+  box-shadow: 0 4px 12px rgba(9, 9, 9, 0.1);
+  border-radius: 12px 12px 12px 12px;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
 }
 
-.tarjeta-ottaviano{
-    margin-top: 7rem;
+.navbar-collapse.show {
+  display: flex !important;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
-.tarjeta-secretaria{
-    margin-top: 7rem;
+.navbar-nav {
+  flex-direction: column;
+  gap: 10px;
+  width: 120%;
 }
 
+.nav-link {
+  font-size: 18px;
+  color: #333;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  white-space: nowrap;
+  line-height: 1.2;
+}
 
+.nav-link span {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
 
-.card-nosotros{
-    width: 90%;
-    height: 300px;
-    position: relative;
-    transform-style: preserve-3d; /* Mantiene el espacio 3D para la animación */
-    transition: transform 1.5s;
+.nav-link:hover {
+  background-color: #f5f5f5;
+  color: #51BAA9;
+}
+
+/* MAIN */
+main {
+  margin-top: 2rem;
+}
+
+.falso-main-index {
+  text-align: center;
+}
+
+.titulo-index {
+  font-size: xx-large;
+}
+
+.bienvenido {
+  margin: 1rem;
+  margin-top: 1.5rem;
+  border: 1px solid black;
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+.seccion-quienes-somos {
+  margin-top: 1rem;
+}
+
+.imagen-quienes-somos {
+  width: 10rem;
+}
+
+.imagen-servicios {
+  width: 8rem;
+}
+
+.quienes-somos {
+  border: 1px solid black;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 15px;
+}
+
+.servicios {
+  border-top: 1px solid black;
+  margin: 2rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.seccion-servicios {
+  margin-top: 4rem;
+}
+
+.negrita {
+  font-weight: bolder;
+  margin-top: 1rem;
+}
+
+.card {
+  display: inline-block;
+  justify-content: center;
+  border-radius: 30px;
+  width: 90%;
+  margin: 1rem auto;
+}
+
+.card:hover {
+  box-shadow: 15px 15px 38px black;
+  transition: 0.3s;
+}
+
+.card-body, .background {
+  background-color: #f0eded;
+}
+
+/* Nosotros */
+.foto-patricia, .foto-soledad {
+  width: 100%;
+  height: auto;
+}
+
+.main-nosotros {
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: center;
+  margin-left: 2rem;
+  text-align: center;
+}
+
+.tarjeta-anabella,
+.tarjeta-contard,
+.tarjeta-ottaviano,
+.tarjeta-secretaria {
+  margin-top: 7rem;
+}
+
+.card-nosotros {
+  width: 90%;
+  height: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1.5s;
 }
 
 .card-nosotros:hover {
-    transform: rotateY(180deg); /* Rota la tarjeta al pasar el ratón */
+  transform: rotateY(180deg);
 }
 
 .card-front, .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden; /* Oculta el lado opuesto */
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
-
-
 
 .card-back {
-    transform: rotateY(180deg); /* Gira el reverso */
+  transform: rotateY(180deg);
+}
+
+.tarjetas-nosotros {
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  margin: 1rem;
+}
+
+.card-front img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+  margin: 30px auto 1rem auto;
+  display: block;
+}
+
+.card-front,
+.card-back {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(to top, #989898, whitesmoke);
+}
+
+.logo-footer {
+  width: 40%;
+}
+
+.falso-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem 1rem 0 1rem;
+  gap: 1rem;
+  text-align: center;
+}
+
+.contactanos {
+  margin-right: 0;
+}
+
+.whatsapp-icon, .imagen-ig {
+  width: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.link-redes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.consultas {
+  margin-bottom: 1rem;
+}
+
+.ubicacion, .mapa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.derechos-reservados {
+  text-align: center;
+  background-color: whitesmoke;
 }
 
 
-/*footer*/
-
-footer{
-    background: linear-gradient(to top, #989898, whitesmoke);
-
-}
-
-.logo-footer{
-    width: 40%;
-}
-
-
-.falso-footer{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 1rem;
-    margin-top: 4rem;
-    margin-right: 1rem;
-    margin-bottom: 0;
-}
-
-.contactanos{
-    margin-right: 2rem;
-}
-
-.whatsapp-icon{
-    width: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.imagen-ig{
-    width: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.link-redes{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    column-gap: 1rem;
-}
-
-.consultas{
-    margin-bottom: 1rem;
-}
-
-.ubicacion, .mapa{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.mapa{
-    justify-content: center;
-}
-
-.derechos-reservados{
-    text-align: center;
-    background-color: whitesmoke;
-}
-
-/* TABLETS */
-
-@media (min-width: 768px) and (max-width: 1024px){
+/* =======================
+   TABLET STYLES
+========================== */
+@media (min-width: 768px) and (max-width: 1023px) {
 
   .logo{
-    height: 100;
-    width: auto;
+    width: 30%;
+    height: 250px;
+  }
+  .navbar-collapse {
+    display: none;
   }
 
-
-  header{
-        padding-bottom: 6rem;
-    }
-
-    .navbar-nav {
-      gap: 0px;
-    }
-
-    .navbar{
-      padding-left: 12rem;
-    }
-
-    .mapa {
-      width: 100%;
-    }
-}
-
-@media (max-width: 1023px) {
-  .navbar-collapse {
-    background-color: #ffffff;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 8px;
+  .navbar-collapse.show {
+    display: flex !important;
   }
 
   .navbar-nav {
@@ -341,98 +335,90 @@ footer{
     gap: 15px;
   }
 
-  .nav-link {
-    font-size: 18px;
-    color: #333;
-    padding: 10px;
-    border-bottom: 1px solid #eee;
-    transition: background-color 0.3s ease;
+  .navbar-toggler {
+    display: block;
   }
 
-  .nav-link:hover {
-    background-color: #f5f5f5;
-    color: #007bff;
+  .mapa {
+    width: 100%;
   }
 }
 
-
-
-
-/* LAPTOPS */
-
+/* =======================
+   LAPTOP STYLES
+========================== */
 @media (min-width: 1024px) {
 
-  
-  header {
-    padding: 10px 30px;
+ header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: 117px;
+}
+
+  .logo {
+    width: 15%;
+    height: 15rem;
   }
 
-  header .logo{
-    height: 100;
-    width: auto;
-  }
-
-  
   .navbar {
-    flex-grow: 1;
+    /*flex-grow: ;*/
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-
-  .navbar-brand {
-    
-    margin-right: 30px;
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-
-  }
-
-  
-  .navbar-collapse {
-    display: flex !important;
-    justify-content: flex-end;
-    align-items: center;
+    position: relative;
+    margin-top: 2rem;
   }
 
   .navbar-toggler {
     display: none;
   }
 
-  
+  .navbar-collapse {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+
   .navbar-nav {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 30px;
-      
+    flex-direction: row;
+    gap: 30px;
   }
 
-  
-  .nav-item {
-      margin: 0;
-  }
-
-  
   .nav-link {
     font-size: 16px;
     font-weight: 500;
     color: #333;
-    padding: 8px 12px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 18px 18px;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.7s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
   }
 
   .nav-link:hover {
-    background-color: #f0f0f0;
-    color: #007bff;
+    background-color: #e7e7e7;
+    color: #51BAA9;
+  
   }
 
-
-
-    
+  
 }
+
 
 
 
