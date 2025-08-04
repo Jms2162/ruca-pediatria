@@ -148,7 +148,7 @@ main {
 
 .servicios {
   border-top: 1px solid black;
-  margin: 2rem 1rem 1rem 1rem;
+  margin: 3rem 2rem 2rem 2rem;
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -315,6 +315,7 @@ footer {
 
 
 
+
 /* =======================
    TABLET STYLES
 ========================== */
@@ -359,8 +360,8 @@ footer {
   z-index: 1000;
   background-color: white;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  height: 117px;
-}
+  height: 110px;
+  }
 
   .logo {
     width: 15%;
@@ -396,31 +397,31 @@ footer {
 
   .navbar-nav {
     flex-direction: row;
-    gap: 30px;
+    gap: 25px;
   }
 
   .nav-link {
     font-size: 16px;
     font-weight: 500;
     color: #333;
-    padding: 18px 18px;
+    padding: 40px 28px;
     border: none;
     border-radius: 10px;
     transition: background-color 0.7s ease, color 0.3s ease;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 1px;
   }
 
   .nav-link:hover {
     background-color: #e7e7e7;
     color: #51BAA9;
-  
+
   }
 
-  
 }
 
+/*MAIN LAPTOP*/
 
 
-
+/* FOOTER LAPTOP*/
